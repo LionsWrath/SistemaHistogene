@@ -1,5 +1,5 @@
 # Sistema Histogene
-  TODO: Descrição do Trabalho
+  Sistema de Laboratório de Exames para acompanhamento de exames de Compatibilidade Renal, Compatibilidade de Medula Óssea e Paternidade.
   
 ## Grupo de Trabalho
 1. Caio Henrique Segawa Tonetti
