@@ -9,5 +9,6 @@
     <property name="hibernate.connection.password">1234</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="" file="" jar="" package="" resource="CRUD/Usuario/Usuario.hbm.xml"/>
+    <mapping resource="CRUD/Pacientes/paciente.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
