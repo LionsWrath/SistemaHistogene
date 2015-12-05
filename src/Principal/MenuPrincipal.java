@@ -1,5 +1,6 @@
 package Principal;
 
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,24 +20,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         String[] perm = permissoes.split(" ");
-        
-        if (perm[0].equals("1")){
-            this.pacientes.setEnabled(true);
-        } else {
-            this.pacientes.setEnabled(false);
-        }
-        
-        if (perm[1].equals("1")){
-            this.exames.setEnabled(true);
-        } else {
-            this.exames.setEnabled(false);
-        }
-        
-        if (perm[2].equals("1")){
-            this.resultados.setEnabled(true);
-        } else {
-            this.resultados.setEnabled(false);
-        }
         
         if (perm[3].equals("1")){
             this.usuarios.setEnabled(true);
@@ -63,6 +46,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         auditoria = new javax.swing.JMenu();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem22 = new javax.swing.JMenuItem();
+        usuarios = new javax.swing.JMenu();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,6 +78,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
         auditoria.add(jMenuItem22);
 
         jMenuBar1.add(auditoria);
+
+        usuarios.setText("Usuarios");
+
+        jMenuItem9.setText("Cadastrar Usuario");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        usuarios.add(jMenuItem9);
+
+        jMenuItem11.setText("Consultar Usuario");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        usuarios.add(jMenuItem11);
+
+        jMenuBar1.add(usuarios);
 
         setJMenuBar(jMenuBar1);
 
@@ -127,6 +133,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        new CRUD.Usuario.CadastrarUsuarioInterface().setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        new CRUD.Usuario.ConsultarUsuario().setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
     private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         //TODO: REMOVE
     }//GEN-LAST:event_jMenuItem22ActionPerformed
@@ -141,9 +155,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem22;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenu sessao;
+    private javax.swing.JMenu usuarios;
     // End of variables declaration//GEN-END:variables
 }

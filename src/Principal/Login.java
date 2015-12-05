@@ -1,5 +1,13 @@
 package Principal;
 
+
+import CRUD.Usuario.Usuario;
+import CRUD.Usuario.UsuarioController;
+import com.psw.conexao.HibernateUtil;
+import javax.swing.JOptionPane;
+import org.hibernate.*;
+import org.hibernate.Session;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -107,7 +115,53 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //TODO
+
+        try{
+            Usuario usuario = null;
+            Session sessao = null;
+            Transaction transacao = null;
+            Query consulta = null;
+            if (login.getText().equals("teste") && senha.getText().equals("teste")){
+                UsuarioController controladora = new UsuarioController();
+                System.out.println(login.getText() + "  " + senha.getText());
+                if (controladora.ListarADM()){
+                    System.out.println("1");
+                    JOptionPane.showMessageDialog(null, "Acesso Garantido!");
+                    new MenuPrincipal("1 1 1 1 1 1 1 1 1 1 1").setVisible(true);
+                    this.dispose();
+                }
+                else{
+                    System.out.println("2");
+                    JOptionPane.showMessageDialog(null, "Já existe um administrador cadastrado!\n Está opção de login foi  desabilitada!");
+                }
+            }
+            else{
+                sessao = HibernateUtil.getSessionFactory().openSession();
+                transacao = sessao.beginTransaction();
+                consulta = sessao.createQuery("from Usuario where login = :usuario AND senha = :passwd");
+                consulta.setParameter("usuario", login.getText());
+                consulta.setParameter("passwd", senha.getText());
+                usuario = (Usuario) consulta.uniqueResult();
+                transacao.commit();
+                System.out.println("Resultado:" + usuario.getSenha());
+                if ( usuario.getSenha().equals(senha.getText())){
+                    JOptionPane.showMessageDialog(null, "Acesso Garantido!");
+                    new MenuPrincipal(usuario.getPermissoes()).setVisible(true);
+                    this.dispose();
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Login/Senha Incorreto(s)");
+                }
+            }
+        }
+        catch(NullPointerException ae){
+            JOptionPane.showMessageDialog(null, "ERRO!");
+        }
+        catch(Exception e){
+        //Handle errors for Class.forName
+        e.printStackTrace();
+            }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
