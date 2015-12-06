@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/HibernateMapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="CRUD.Exames">
+<class name="Exame" table="exames">
+<id name="id" column="id" >
+    <generator class="increment"/>  
+</id>
+<property name="nome" type="string" column="nome" />
+<property name="codigo" type="string" column="codigo" />
+<property name="material" type="string" column="material" />
+<property name="tipo" type="string" column="tipo" />
+<property name="datacol" type="string" column="datacol" />
+<property name="convenio" type="string" column="convenio" />
+<property name="centro" type="string" column="centro" />
+<property name="pago" type="boolean" column="pago" />
+<property name="data" type="date" column="data" />
+
+
+</class>
+</hibernate-mapping>

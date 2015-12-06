@@ -29,6 +29,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
             this.pacientes.setEnabled(false);
         }
         
+        if (perm[1].equals("1")){
+            this.exames.setEnabled(true);
+        } else {
+            this.exames.setEnabled(false);
+        }
+        
         if (perm[3].equals("1")){
             this.usuarios.setEnabled(true);
         } else {
@@ -55,6 +61,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        exames = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
         auditoria = new javax.swing.JMenu();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem22 = new javax.swing.JMenuItem();
@@ -99,6 +109,27 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pacientes.add(jMenuItem3);
 
         jMenuBar1.add(pacientes);
+
+        exames.setText("Exames");
+
+        jMenuItem1.setText("Cadastrar Exame");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        exames.add(jMenuItem1);
+
+        jMenuItem5.setText("Consultar Exame");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        exames.add(jMenuItem5);
+        exames.add(jSeparator2);
+
+        jMenuBar1.add(exames);
 
         auditoria.add(jSeparator3);
 
@@ -174,6 +205,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new CRUD.Pacientes.ConsultarPaciente().setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        new CRUD.Exames.CadastrarExameInterface().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         new CRUD.Usuario.CadastrarUsuarioInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
@@ -181,6 +216,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
         new CRUD.Usuario.ConsultarUsuario().setVisible(true);
     }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        new CRUD.Exames.ConsultarExameInterface().setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
         //TODO: REMOVE
@@ -193,16 +232,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu auditoria;
+    private javax.swing.JMenu exames;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem22;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenu pacientes;
     private javax.swing.JMenu sessao;
