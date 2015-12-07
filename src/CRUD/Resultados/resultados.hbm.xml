@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="CRUD.Resultados">
+ <class name="Resultados" table="RESULTADOS">
+    <id name="id" type="int" column="resultado_id"/>    
+    <property name="obs" type="string" column="obs" />
+    <property name="metodo" type="string" column="metodo" />
+    <property name="data" type="date" column="data" />
+    
+    
+    <joined-subclass name="HLA_B27" extends="Resultados">
+        <key column="resultado_id" />
+        <property name="pesquisa" type="string" column="pesquisa"/>
+    </joined-subclass>
+    <joined-subclass name="PRA" extends="Resultados">
+        <key column="resultado_id"/>
+        <property name="ci" type="string" column="ci"/>
+        <property name="cii" type="string" column="cii"/>
+    </joined-subclass>
+   <joined-subclass name="CrossMatch" extends="Resultados">
+        <key column="resultado_id"/>
+        <property name="linft" type="string" column="linft" />
+        <property name="linft_agh" type="string" column="linft_agh" />
+        <property name="linft_dtt" type="string" column="linft_dtt" />
+        <property name="linft_agh_dtt" type="string" column="linft_agh_dtt" />
+        <property name="ac_linft" type="string" column="ac_linft" />
+        <property name="linfb" type="string" column="linfb" />
+        <property name="linfb_dtt" type="string" column="linfb_dtt" />
+        <property name="ac_linfb" type="string" column="ac_linfb" />
+    </joined-subclass>
+    <joined-subclass name="TipificacaoHLA" extends="Resultados">
+        <key column="resultado_id"/>
+        <property name="a1" type="string" column="a1" />
+        <property name="a2" type="string" column="a2" />
+        <property name="a3" type="string" column="a3" />
+        <property name="a4" type="string" column="a4" />
+        <property name="c1" type="string" column="c1" />
+        <property name="c2" type="string" column="c2" />
+        <property name="c3" type="string" column="c3" />
+        <property name="c4" type="string" column="c4" />
+        <property name="b1" type="string" column="b1" />
+        <property name="b2" type="string" column="b2" />
+        <property name="b3" type="string" column="b3" />
+        <property name="b4" type="string" column="b4" />
+        <property name="dr1" type="string" column="dr1" />
+        <property name="dr2" type="string" column="dr2" />
+        <property name="dr3" type="string" column="dr3" />
+        <property name="dr4" type="string" column="dr4" />
+        <property name="dq1" type="string" column="dq1" />
+        <property name="dq2" type="string" column="dq2" />
+        <property name="dq3" type="string" column="dq3" />
+        <property name="dq4" type="string" column="dq4" />
+        <property name="compatibilidade" type="string" column="compatibilidade" />
+    </joined-subclass>
+ </class>
+</hibernate-mapping>
