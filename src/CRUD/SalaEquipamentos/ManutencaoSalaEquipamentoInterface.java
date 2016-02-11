@@ -6,6 +6,8 @@
 package CRUD.SalaEquipamentos;
 
 import CRUD.SalaEquipamentos.*;
+import CRUD.SalaEquipamentos.Itens.Item;
+import CRUD.SalaEquipamentos.Itens.ItemController;
 import javax.swing.JOptionPane;
 /**
  *
@@ -210,7 +212,20 @@ public class ManutencaoSalaEquipamentoInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_cadastrarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //Necessita Implementação Itens
+        Item itembusca = ItemController.ConsultarItem(this.item.getText());
+        if (itembusca != null){
+            this.localizacao.setText(itembusca.getLocalizacao());
+            this.datamanutencao.setText(itembusca.getDatamanutencao().toString());
+            if (itembusca.getClassificacao()==1){
+                this.freezer.setSelected(true);
+            }
+            else if (itembusca.getClassificacao()==2){
+                this.sala.setSelected(true);
+            }
+            else if (itembusca.getClassificacao()==3){
+                this.equipamento.setSelected(true);
+            }
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

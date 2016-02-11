@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/HibernateMapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="CRUD.SalaEquipamentos.Itens">
+<class name="Item" table="item">
+<id name="nome" type="string" column="nome" />
+<property name="localizacao" type="string" column="localizacao" />
+<property name="classificacao" type="int" column="classificacao" />
+<property name="datamanutencao" type="date" column="datamanutencao" />
+
+</class>
+</hibernate-mapping>

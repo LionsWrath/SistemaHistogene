@@ -76,10 +76,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
             this.equipamentos.setEnabled(false);
         }
         if (perm[7].equals("1")){
-            //Permissão para itens
+            this.estoque.setEnabled(true);
         }
         else{
-            //Permissão para itens
+            this.estoque.setEnabled(false);
         }
         if (perm[8].equals("1")){
             //Permissão para pagamentos
@@ -122,6 +122,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem30 = new javax.swing.JMenuItem();
+        estoque = new javax.swing.JMenu();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
         usuarios = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
@@ -250,6 +253,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(equipamentos);
 
+        estoque.setText("Estoque");
+
+        jMenuItem14.setText("Cadastrar Item");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem14ActionPerformed(evt);
+            }
+        });
+        estoque.add(jMenuItem14);
+
+        jMenuItem15.setText("Consultar Item");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        estoque.add(jMenuItem15);
+
+        jMenuBar1.add(estoque);
+
         usuarios.setText("Usuarios");
 
         jMenuItem9.setText("Cadastrar Usuario");
@@ -320,6 +343,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
+        new CRUD.SalaEquipamentos.Itens.CadastrarItemInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
@@ -346,8 +370,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new CRUD.Resultados.ConsultarResultadoInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+
+        new CadastrarMaterial().setVisible(true);
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
+
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+
+        new ConsultarMaterial().setVisible(true);
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
 
+        new CRUD.SalaEquipamentos.Itens.ConsultarItem().setVisible(true);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
@@ -357,6 +392,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
 
+        new CRUD.SalaEquipamentos.Itens.ConsultarItensInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem30ActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
@@ -371,6 +407,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu equipamentos;
+    private javax.swing.JMenu estoque;
     private javax.swing.JMenu exames;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -380,6 +417,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem29;
