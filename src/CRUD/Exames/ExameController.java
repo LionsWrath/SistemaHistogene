@@ -6,6 +6,7 @@
 
 package CRUD.Exames;
 
+import CRUD.Materiais.Materiais;
 import com.psw.conexao.HibernateUtil;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -46,8 +47,26 @@ public class ExameController {
     }
     
     public static boolean vertificaMaterial(String tipo){
-        //Verificação para quando existir o gerenciamento de materiais
-        return true;
+        boolean ok;
+        Materiais mat;
+        Session ses = HibernateUtil.getSessionFactory().openSession();
+        Transaction trans = ses.beginTransaction();
+        
+        Criteria query = ses.createCriteria(Materiais.class);
+        mat = (Materiais) query.add(Restrictions.eq("tipo", tipo)).uniqueResult();
+        ok=false;
+        
+        if (mat != null){
+            if (mat.getQuantidade() > 0){
+                int quant;
+                quant = mat.getQuantidade();
+                mat.setQuantidade(quant-1);
+                ses.update(mat);
+                trans.commit();
+                ok = true;
+            }
+        }
+        return ok;
     }
     
     

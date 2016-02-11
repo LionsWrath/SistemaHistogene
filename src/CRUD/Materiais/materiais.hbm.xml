@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="CRUD.Materiais.Materiais" table="materiais">
+        <id column="modelo" name="modelo" type="string"/>
+        <property column="nome" name="nome" type="string"/>
+        <property column="fabricante" name="fabricante" type="string"/>
+        <property column="tipo" name="tipo" type="string"/>
+        <property column="quantidade" name="quantidade" type="int"/>
+        <property column="obs" name="obs" type="string"/>
+        <property column="status" name="status" type="boolean"/>
+    </class>
+</hibernate-mapping>
