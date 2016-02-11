@@ -70,10 +70,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
             //Permissão para compras
         }
         if (perm[6].equals("1")){
-            //Permissão para salas/equipamentos
+            this.equipamentos.setEnabled(true);
         }
         else{
-            //Permissão para salas/equipamentos
+            this.equipamentos.setEnabled(false);
         }
         if (perm[7].equals("1")){
             //Permissão para itens
@@ -115,6 +115,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         resultados = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
+        equipamentos = new javax.swing.JMenu();
+        jMenuItem28 = new javax.swing.JMenuItem();
+        jMenuItem29 = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem30 = new javax.swing.JMenuItem();
         usuarios = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
@@ -198,6 +205,51 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(resultados);
 
+        equipamentos.setText("Salas/Equipamentos");
+
+        jMenuItem28.setText("Cadastrar Medição");
+        jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem28ActionPerformed(evt);
+            }
+        });
+        equipamentos.add(jMenuItem28);
+
+        jMenuItem29.setText("Consultar Medições");
+        jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem29ActionPerformed(evt);
+            }
+        });
+        equipamentos.add(jMenuItem29);
+        equipamentos.add(jSeparator4);
+
+        jMenuItem8.setText("Cadastrar Sala/Equipamento");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
+        equipamentos.add(jMenuItem8);
+
+        jMenuItem13.setText("Consultar Sala/Equipamento");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        equipamentos.add(jMenuItem13);
+
+        jMenuItem30.setText("Listar Sala/Equipamentos");
+        jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem30ActionPerformed(evt);
+            }
+        });
+        equipamentos.add(jMenuItem30);
+
+        jMenuBar1.add(equipamentos);
+
         usuarios.setText("Usuarios");
 
         jMenuItem9.setText("Cadastrar Usuario");
@@ -266,6 +318,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new CRUD.Exames.CadastrarExameInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
+
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
 
         new CRUD.Usuario.CadastrarUsuarioInterface().setVisible(true);
@@ -290,12 +346,31 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new CRUD.Resultados.ConsultarResultadoInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
+
+        new CRUD.SalaEquipamentos.ManutencaoSalaEquipamentoInterface().setVisible(true);
+    }//GEN-LAST:event_jMenuItem28ActionPerformed
+
+    private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
+
+    }//GEN-LAST:event_jMenuItem30ActionPerformed
+
+    private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
+
+        new CRUD.SalaEquipamentos.ConsultarMedicoesInterface().setVisible(true);
+    }//GEN-LAST:event_jMenuItem29ActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu equipamentos;
     private javax.swing.JMenu exames;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -304,13 +379,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem28;
+    private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JMenu pacientes;
     private javax.swing.JMenu resultados;
     private javax.swing.JMenu sessao;
