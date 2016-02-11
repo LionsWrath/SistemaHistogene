@@ -22,31 +22,64 @@ public class MenuPrincipal extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         String[] perm = permissoes.split(" ");
-        
+        System.out.println(permissoes);
+        System.out.println(perm[0] + perm[1] + perm[2] +  perm[3]+ perm[4]+ perm[5]+ perm[6]+ perm[7]+ perm[8]);
         if (perm[0].equals("1")){
             this.pacientes.setEnabled(true);
-        } else {
+        }
+        else{
             this.pacientes.setEnabled(false);
         }
-        
         if (perm[1].equals("1")){
             this.exames.setEnabled(true);
-        } else {
+        }
+        else{
             this.exames.setEnabled(false);
         }
-        
         if (perm[2].equals("1")){
             this.resultados.setEnabled(true);
-        } else {
+        }
+        else{
             this.resultados.setEnabled(false);
         }
-        
         if (perm[3].equals("1")){
             this.usuarios.setEnabled(true);
-        } else {
+        }
+        else{
             this.usuarios.setEnabled(false);
-        }     
-   
+        }
+        if (perm[4].equals("1")){
+            //permissão do relatório
+        }
+        else{
+            //permissão do relatório
+        }
+        //5 e 6 eliminadas
+        if (perm[5].equals("1")){
+            //Permissão para compras
+        }
+        else{
+            //Permissão para compras
+        }
+        if (perm[6].equals("1")){
+            //Permissão para salas/equipamentos
+        }
+        else{
+            //Permissão para salas/equipamentos
+        }
+        if (perm[7].equals("1")){
+            //Permissão para itens
+        }
+        else{
+            //Permissão para itens
+        }
+        if (perm[8].equals("1")){
+            //Permissão para pagamentos
+        }
+        else{
+            //Permissão para pagamentos
+        }
+        
     }
 
     /**
@@ -64,11 +97,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         sessao = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
         pacientes = new javax.swing.JMenu();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         exames = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
         resultados = new javax.swing.JMenu();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
@@ -94,6 +129,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(sessao);
 
         pacientes.setText("Pacientes");
+        pacientes.add(jSeparator1);
 
         jMenuItem2.setText("Cadastrar");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -130,6 +166,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         exames.add(jMenuItem5);
+        exames.add(jSeparator2);
 
         jMenuBar1.add(exames);
 
@@ -180,21 +217,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(160, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(288, 288, 288))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(153, 153, 153))))
+                .addContainerGap(560, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(288, 288, 288))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(301, 301, 301)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(58, 58, 58)
                 .addComponent(jLabel1)
-                .addGap(27, 27, 27)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel2)
                 .addContainerGap(74, Short.MAX_VALUE))
         );
@@ -203,6 +239,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+
         new CadastrarPaciente2().setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -212,18 +249,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+
         new CRUD.Pacientes.ConsultarPaciente().setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+
         new CRUD.Exames.CadastrarExameInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+
         new CRUD.Usuario.CadastrarUsuarioInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+
         new CRUD.Resultados.CadastrarResultadoInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
@@ -232,16 +273,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+
         new CRUD.Exames.ConsultarExameInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+
         new CRUD.Resultados.ConsultarResultadoInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
-
-    private void jMenuItem22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem22ActionPerformed
-        //TODO: REMOVE
-    }//GEN-LAST:event_jMenuItem22ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,11 +297,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem22;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JMenu pacientes;
     private javax.swing.JMenu resultados;
     private javax.swing.JMenu sessao;

@@ -13,7 +13,7 @@ import org.hibernate.criterion.Restrictions;
 
 /**
  *
- * @author Ricardo
+ * @author Caio
  */
 public class PacientesController {
     public static Paciente getNomePaciente(String rg){

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/HibernateMapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="CRUD.Pacientes">
+<class name="Paciente" table="pacientes">
+<id name="rg" type="string" column="rg" />
+<property name="primeironome" type="string" column="primeironome" />
+<property name="meionome" type="string" column="meionome" />
+<property name="ultimonome" type="string" column="ultimonome" />
+<property name="datanasc" type="string" column="datanasc" />
+<property name="sex" type="string" column="sexo" />
+<property name="cpf" type="string" column="cpf" />
+<property name="endereco" type="string" column="endereco" />
+<property name="cep" type="string" column="cep" />
+<property name="cidade" type="string" column="cidade" />
+<property name="estado" type="string" column="estado" />
+<property name="telres" type="string" column="telres" />
+<property name="telcom" type="string" column="telcom" />
+<property name="telcel" type="string" column="telcel" />
+<property name="obs" type="string" column="obs" />
+
+</class>
+</hibernate-mapping>

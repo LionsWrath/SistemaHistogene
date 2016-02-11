@@ -50,13 +50,11 @@ public class PermissoesUsuario extends javax.swing.JDialog {
                 } else {
                     this.pacientes.setSelected(false);
                 }
-                
                 if (perm[1].equals("1")) {
                     this.exames.setSelected(true);
                 } else {
                     this.exames.setSelected(false);
                 }
-                
                 if (perm[2].equals("1")) {
                     this.resultados.setSelected(true);
                 } else {
@@ -72,22 +70,22 @@ public class PermissoesUsuario extends javax.swing.JDialog {
                 } else {
                     this.relatorios.setSelected(false);
                 }
-                if (perm[7].equals("1")) {
+                if (perm[5].equals("1")) {
                     this.compras.setSelected(true);
                 } else {
                     this.compras.setSelected(false);
                 }
-                if (perm[8].equals("1")) {
+                if (perm[6].equals("1")) {
                     this.equipamentos.setSelected(true);
                 } else {
                     this.equipamentos.setSelected(false);
                 }
-                if (perm[9].equals("1")) {
+                if (perm[7].equals("1")) {
                     this.estoque.setSelected(true);
                 } else {
                     this.estoque.setSelected(false);
                 }
-                if (perm[10].equals("1")) {
+                if (perm[8].equals("1")) {
                     this.pagamentos.setSelected(true);
                 } else {
                     this.pagamentos.setSelected(false);
@@ -368,10 +366,6 @@ public class PermissoesUsuario extends javax.swing.JDialog {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(287, 287, 287)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -444,13 +438,17 @@ public class PermissoesUsuario extends javax.swing.JDialog {
                     .addComponent(compras)
                     .addComponent(pagamentos))
                 .addGap(16, 16, 16))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(344, 344, 344)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(11, 11, 11)
                 .addComponent(jLabel1)
-                .addGap(17, 17, 17)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(adm)
                     .addComponent(bio)
@@ -591,58 +589,58 @@ public class PermissoesUsuario extends javax.swing.JDialog {
         else if (this.outro.isSelected()){
             if (this.pacientes.isSelected()){
                 this.permissoes += "1";
-            } else {
+            }
+            else{
                 this.permissoes += "0";
             }
-            
             if (this.exames.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-            
             if (this.resultados.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-            
             if (this.usuarios.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-            
             if (this.relatorios.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-
             if (this.compras.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-            
             if (this.equipamentos.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-            
             if (this.estoque.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-            
             if (this.pagamentos.isSelected()){
                 this.permissoes += " 1";
-            } else {
+            }
+            else{
                 this.permissoes += " 0";
             }
-            
             this.setVisible(false);
             this.dispose();
         }

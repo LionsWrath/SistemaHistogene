@@ -7,10 +7,12 @@
 package CRUD.Resultados;
 import CRUD.Exames.*;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Caio
  */
+
 public class PRAInterface extends javax.swing.JFrame {
     
     private Exame exame;

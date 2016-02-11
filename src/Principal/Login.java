@@ -125,13 +125,13 @@ public class Login extends javax.swing.JFrame {
                 UsuarioController controladora = new UsuarioController();
                 System.out.println(login.getText() + "  " + senha.getText());
                 if (controladora.ListarADM()){
-                    System.out.println("1");
+                    //System.out.println("1");
                     JOptionPane.showMessageDialog(null, "Acesso Garantido!");
-                    new MenuPrincipal("1 1 1 1 1 1 1 1 1 1 1").setVisible(true);
+                    new MenuPrincipal("1 1 1 1 1 1 1 1 1").setVisible(true);
                     this.dispose();
                 }
                 else{
-                    System.out.println("2");
+                    //System.out.println("2");
                     JOptionPane.showMessageDialog(null, "Já existe um administrador cadastrado!\n Está opção de login foi  desabilitada!");
                 }
             }

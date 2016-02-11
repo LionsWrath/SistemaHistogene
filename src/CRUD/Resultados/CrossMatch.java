@@ -103,8 +103,4 @@ public class CrossMatch extends Resultados {
         this.ac_linfb = ac_linfb;
     }
     
-
-
-    
-    
 }

@@ -7,11 +7,11 @@
 package CRUD.Resultados;
 import CRUD.Exames.*;
 
+
 /**
  *
  * @author Caio
  */
-
 
 public class HLA_B27 extends Resultados {
     

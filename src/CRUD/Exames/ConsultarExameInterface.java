@@ -10,6 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Carlos
@@ -219,6 +220,8 @@ public class ConsultarExameInterface extends javax.swing.JFrame {
         
         else if (this.optnome.isSelected()){
             if (!(this.camponome.getText().equals(""))){
+                
+
                 ExameController controladora = new ExameController();
                 List listaexames = controladora.consultarExameNome(this.camponome.getText());
                 
@@ -231,7 +234,8 @@ public class ConsultarExameInterface extends javax.swing.JFrame {
                         model.addRow(new Object[]{exam.getId(), exam.getNome(), exam.getCodigo(), exam.getTipo(), exam.getDatacol()});
 
                     }
-                }else{
+                }
+                else{
                     int qtde = this.table.getRowCount();
                     for (int a=0; a < qtde; a++){
                         model.removeRow(0);

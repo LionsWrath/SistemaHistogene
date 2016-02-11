@@ -31,9 +31,7 @@ public class Usuario {
     private String senha;
     private String permissoes;
     private String obs;
-    
     public Usuario(){}
-    
     public Usuario(String primeironome, String meionome, String ultimonome, String dianasc, String mesnasc, String anonasc, String sex, String cpf, String rg, String endereco, String cep, String cidade, String estado, String telres, String telcom, String telcel, String login, String senha, String permissoes, String obs) {
         this.primeironome = primeironome;
         this.meionome = meionome;
@@ -104,6 +102,7 @@ public class Usuario {
     public void setUltimonome(String ultimonome) {
         this.ultimonome = ultimonome;
     }
+
 
     public String getSex() {
         return sex;
@@ -209,6 +208,8 @@ public class Usuario {
         this.permissoes = permissoes;
     }
 
+
+
     public String getObs() {
         return obs;
     }
@@ -217,4 +218,7 @@ public class Usuario {
         this.obs = obs;
     }
 
+    
+
+    
 }

@@ -22,6 +22,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Caio
  */
+
 public class CadastrarResultadoInterface extends javax.swing.JFrame {
     
 

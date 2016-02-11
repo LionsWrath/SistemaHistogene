@@ -8,7 +8,7 @@ package CRUD.Pacientes;
 
 /**
  *
- * @author Ricardo
+ * @author Caio
  */
 public class Paciente {
     private String primeironome;

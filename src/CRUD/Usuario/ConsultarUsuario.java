@@ -11,7 +11,13 @@ import Principal.IntegersOnlyDocument;
 import Principal.LengthRestrictedDocument;
 import java.util.Iterator;
 import java.util.List;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 import org.hibernate.HibernateException;
@@ -244,6 +250,95 @@ public class ConsultarUsuario extends javax.swing.JFrame {
         this.logintext.setText("");
         this.cpftext.setText("");
     }
+
+    public JRadioButton getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(JRadioButton cpf) {
+        this.cpf = cpf;
+    }
+
+    public JTextField getCpftext() {
+        return cpftext;
+    }
+
+    public void setCpftext(JTextField cpftext) {
+        this.cpftext = cpftext;
+    }
+
+    public JButton getjButton1() {
+        return jButton1;
+    }
+
+    public void setjButton1(JButton jButton1) {
+        this.jButton1 = jButton1;
+    }
+
+    public JButton getjButton2() {
+        return jButton2;
+    }
+
+    public void setjButton2(JButton jButton2) {
+        this.jButton2 = jButton2;
+    }
+
+    public JButton getjButton3() {
+        return jButton3;
+    }
+
+    public void setjButton3(JButton jButton3) {
+        this.jButton3 = jButton3;
+    }
+
+    public JButton getjButton4() {
+        return jButton4;
+    }
+
+    public void setjButton4(JButton jButton4) {
+        this.jButton4 = jButton4;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JRadioButton getLogin() {
+        return login;
+    }
+
+    public void setLogin(JRadioButton login) {
+        this.login = login;
+    }
+
+    public JTextField getLogintext() {
+        return logintext;
+    }
+
+    public void setLogintext(JTextField logintext) {
+        this.logintext = logintext;
+    }
+
+    public ButtonGroup getOpcao() {
+        return opcao;
+    }
+
+    public void setOpcao(ButtonGroup opcao) {
+        this.opcao = opcao;
+    }
+
+    public JTable getTable() {
+        return table;
+    }
+
+    public void setTable(JTable table) {
+        this.table = table;
+    }
+    
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed

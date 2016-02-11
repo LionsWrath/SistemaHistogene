@@ -8,10 +8,12 @@ package CRUD.Resultados;
 import CRUD.Exames.*;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Caio
  */
+
 public class HLA_B27Interface extends javax.swing.JFrame {
     private Exame examex;
     private HLA_B27 b27;

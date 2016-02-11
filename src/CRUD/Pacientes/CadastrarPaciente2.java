@@ -15,8 +15,9 @@ import org.hibernate.Transaction;
 
 /**
  *
- * @author Ricardo
+ * @author Caio
  */
+
 public class CadastrarPaciente2 extends CadastrarTemplate {
     
     public boolean checkfield(){

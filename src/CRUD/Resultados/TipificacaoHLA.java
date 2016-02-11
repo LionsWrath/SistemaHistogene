@@ -7,6 +7,10 @@
 package CRUD.Resultados;
 import CRUD.Exames.*;
 
+/**
+ *
+ * @author Caio
+ */
 
 public class TipificacaoHLA extends Resultados {
     private String compatibilidade;

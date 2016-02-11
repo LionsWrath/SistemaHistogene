@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 import org.hibernate.*;
 /**
  *
- * @author Ricardo
+ * @author Caio
  */
 public class VisualizarPaciente extends CadastrarPaciente2{
     private final Paciente paciente;

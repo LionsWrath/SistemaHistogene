@@ -17,7 +17,7 @@ import org.hibernate.Transaction;
 
 /**
  *
- * @author Ricardo
+ * @author Caio
  */
 public class ConsultarPaciente extends javax.swing.JFrame {
     private List listaIT = null;
@@ -90,12 +90,6 @@ public class ConsultarPaciente extends javax.swing.JFrame {
         nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeActionPerformed(evt);
-            }
-        });
-
-        rgpac.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rgpacActionPerformed(evt);
             }
         });
 
@@ -360,10 +354,6 @@ public class ConsultarPaciente extends javax.swing.JFrame {
     private void rgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rgActionPerformed
-
-    private void rgpacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rgpacActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rgpacActionPerformed
 
     /**
      * @param args the command line arguments

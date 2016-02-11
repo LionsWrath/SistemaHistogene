@@ -216,7 +216,7 @@ public class PesquisarPaciente extends javax.swing.JFrame {
                 }
                 //setParameter("usuario", logintext.getText()).list();
                 //setParameter("nome", primeironome2).list();
-                //System.out.println(primeironome);
+                System.out.println(primeironome);
                 lista = sessao.createQuery("from Paciente where primeironome = :primeironome").setParameter("primeironome", primeironome).list();
                 it = lista.iterator();
                 transacao.commit();

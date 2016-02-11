@@ -46,7 +46,7 @@ public class ExameController {
     }
     
     public static boolean vertificaMaterial(String tipo){
-        //TODO
+        //Verificação para quando existir o gerenciamento de materiais
         return true;
     }
     
@@ -71,7 +71,6 @@ public class ExameController {
 
         Criteria query = sessao.createCriteria(Exame.class);
         query.add(Restrictions.eq("nome", nome));
-        System.out.println(nome);
         List exames = query.list();
         if (!(exames.isEmpty())){
             return exames;

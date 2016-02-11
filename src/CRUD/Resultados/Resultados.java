@@ -11,6 +11,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ *
+ * @author Caio
+ */
 
 public class Resultados {
     
@@ -40,7 +44,7 @@ public class Resultados {
     public void setData(Date data) {
         this.data = data;
     }
-
+    
     public static void ConsultaResultados(String idbusca){
         
     }
@@ -49,7 +53,6 @@ public class Resultados {
     
     }
     
-
     public int getId() {
         return id;
     }
