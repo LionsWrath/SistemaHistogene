@@ -1,6 +1,8 @@
 package Principal;
 
 import CRUD.Pacientes.CadastrarPaciente2;
+import CRUD.Pedidos.CadastrarPedidoInterface;
+import CRUD.Pedidos.ConsultarPedidoInterface;
 import CRUD.Materiais.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -64,10 +66,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         }
         //5 e 6 eliminadas
         if (perm[5].equals("1")){
-            //Permissão para compras
+            this.compras.setEnabled(true);
         }
         else{
-            //Permissão para compras
+            this.compras.setEnabled(false);
         }
         if (perm[6].equals("1")){
             this.equipamentos.setEnabled(true);
@@ -128,6 +130,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         estoque = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
+        compras = new javax.swing.JMenu();
+        jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem17 = new javax.swing.JMenuItem();
         usuarios = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
@@ -296,6 +301,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(estoque);
 
+        compras.setText("Compras");
+
+        jMenuItem16.setText("Cadastrar Pedido");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
+        compras.add(jMenuItem16);
+
+        jMenuItem17.setText("Consultar Pedido");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        compras.add(jMenuItem17);
+
+        jMenuBar1.add(compras);
+
         usuarios.setText("Usuarios");
 
         jMenuItem9.setText("Cadastrar Usuario");
@@ -403,6 +428,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new ConsultarMaterial().setVisible(true);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        new CadastrarPedidoInterface().setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+         new ConsultarPedidoInterface().setVisible(true);
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
     private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
 
         new CRUD.Pagamentos.CadastrarPagamento().setVisible(true);
@@ -439,6 +473,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu compras;
     private javax.swing.JMenu equipamentos;
     private javax.swing.JMenu estoque;
     private javax.swing.JMenu exames;
@@ -452,6 +487,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem24;

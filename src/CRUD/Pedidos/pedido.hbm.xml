@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/HibernateMapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="CRUD.Pedidos">
+<class name="Pedido" table="pedidos">
+<id column="pedido_id" name="pedido_id"  type="int">
+    <generator class="increment"/>
+</id>
+<property name="nomeproduto" type="string" column="nomeproduto" />
+<property name="nomefabricante" type="string" column="nomefabricante" />
+<property name="quantidade" type="string" column="quantidade" />
+<property name="modelo" type="string" column="modelo" />
+<property name="valor" type="string" column="valor" />
+<property name="obs" type="string" column="obs" />
+<property name="datapedido" type="string" column="datapedido" />
+
+</class>
+</hibernate-mapping>
