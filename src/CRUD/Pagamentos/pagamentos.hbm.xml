@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="CRUD.Pagamentos.Pagamento" table="pagamentos">
+      <id column="numNF" name="numNF">
+           <generator class="increment"/>  
+      </id>
+    <property column="nParcelas" name="nParcelas" type="short"/>
+    <property column="formaPagamento" name="formaPagamento" type="boolean"/>
+    <property column="valor" name="valor" type="float"/>
+    <property column="codigo" name="codExame" type="string"/>
+    <property column="dataPagamento" name="dataPagamento" type="string"/>
+    <property column="idPagamento" name="idPagamento" type="int"/>
+    <property column="ativo" name="ativo" type="boolean"/>
+    <property column="pago" name="parcelasPago" type="short"/>
+    
+  </class>
+</hibernate-mapping>

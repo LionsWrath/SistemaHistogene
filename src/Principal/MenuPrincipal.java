@@ -82,10 +82,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
             this.estoque.setEnabled(false);
         }
         if (perm[8].equals("1")){
-            //Permissão para pagamentos
+            this.pagamentos.setEnabled(true);
         }
         else{
-            //Permissão para pagamentos
+            this.pagamentos.setEnabled(false);
         }
         
     }
@@ -104,6 +104,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         sessao = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
+        pagamentos = new javax.swing.JMenu();
+        jMenuItem23 = new javax.swing.JMenuItem();
+        jMenuItem24 = new javax.swing.JMenuItem();
         pacientes = new javax.swing.JMenu();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -145,6 +148,26 @@ public class MenuPrincipal extends javax.swing.JFrame {
         sessao.add(jMenuItem4);
 
         jMenuBar1.add(sessao);
+
+        pagamentos.setText("Pagamentos");
+
+        jMenuItem23.setText("Cadastrar Pagamento");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem23ActionPerformed(evt);
+            }
+        });
+        pagamentos.add(jMenuItem23);
+
+        jMenuItem24.setText("Consultar Pagamento");
+        jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem24ActionPerformed(evt);
+            }
+        });
+        pagamentos.add(jMenuItem24);
+
+        jMenuBar1.add(pagamentos);
 
         pacientes.setText("Pacientes");
         pacientes.add(jSeparator1);
@@ -380,6 +403,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new ConsultarMaterial().setVisible(true);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+
+        new CRUD.Pagamentos.CadastrarPagamento().setVisible(true);
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
+
+    private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
+
+        new CRUD.Pagamentos.ConsultarPagamento().setVisible(true);
+    }//GEN-LAST:event_jMenuItem24ActionPerformed
+
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
 
         new CRUD.SalaEquipamentos.Itens.ConsultarItem().setVisible(true);
@@ -420,6 +453,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem23;
+    private javax.swing.JMenuItem jMenuItem24;
     private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
@@ -432,6 +467,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JMenu pacientes;
+    private javax.swing.JMenu pagamentos;
     private javax.swing.JMenu resultados;
     private javax.swing.JMenu sessao;
     private javax.swing.JMenu usuarios;
