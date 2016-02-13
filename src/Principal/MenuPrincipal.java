@@ -90,6 +90,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             this.pagamentos.setEnabled(false);
         }
         
+        MateriaisController.avisoEstoque();
     }
 
     /**
@@ -370,7 +371,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CadastrarPaciente2().setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -380,27 +381,27 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Pacientes.ConsultarPaciente().setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Exames.CadastrarExameInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.SalaEquipamentos.Itens.CadastrarItemInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Usuario.CadastrarUsuarioInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Resultados.CadastrarResultadoInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
@@ -409,22 +410,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Exames.ConsultarExameInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Resultados.ConsultarResultadoInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CadastrarMaterial().setVisible(true);
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new ConsultarMaterial().setVisible(true);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
@@ -438,32 +439,32 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem17ActionPerformed
 
     private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Pagamentos.CadastrarPagamento().setVisible(true);
     }//GEN-LAST:event_jMenuItem23ActionPerformed
 
     private void jMenuItem24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem24ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.Pagamentos.ConsultarPagamento().setVisible(true);
     }//GEN-LAST:event_jMenuItem24ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.SalaEquipamentos.Itens.ConsultarItem().setVisible(true);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem28ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.SalaEquipamentos.ManutencaoSalaEquipamentoInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem28ActionPerformed
 
     private void jMenuItem30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem30ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.SalaEquipamentos.Itens.ConsultarItensInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem30ActionPerformed
 
     private void jMenuItem29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem29ActionPerformed
-
+        //MateriaisController.avisoEstoque();
         new CRUD.SalaEquipamentos.ConsultarMedicoesInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem29ActionPerformed
 

@@ -83,4 +83,17 @@ public class MateriaisController {
         ses.close();
         
     }
+    
+    public static void avisoEstoque(){
+        Session ses = HibernateUtil.getSessionFactory().openSession();
+        Transaction trans = ses.beginTransaction();  
+        List lista;
+        
+        Criteria query = ses.createCriteria(Materiais.class);
+        query.add(Restrictions.le("quantidade", 10));
+        lista = query.list();
+        if (!lista.isEmpty()){
+            new NotificacaoEstoque(lista).setVisible(true);
+        }
+    }
 }
