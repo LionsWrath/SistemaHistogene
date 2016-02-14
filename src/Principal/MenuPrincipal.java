@@ -59,10 +59,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
             this.usuarios.setEnabled(false);
         }
         if (perm[4].equals("1")){
-            //permissão do relatório
+            this.relatorios.setEnabled(true);
         }
         else{
-            //permissão do relatório
+            this.relatorios.setEnabled(false);
         }
         //5 e 6 eliminadas
         if (perm[5].equals("1")){
@@ -137,6 +137,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         usuarios = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
+        relatorios = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -342,6 +345,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(usuarios);
 
+        relatorios.setText("Relatorios");
+
+        jMenuItem6.setText("Geral");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        relatorios.add(jMenuItem6);
+
+        jMenuItem7.setText("Manutenção");
+        relatorios.add(jMenuItem7);
+
+        jMenuBar1.add(relatorios);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -468,6 +486,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new CRUD.SalaEquipamentos.ConsultarMedicoesInterface().setVisible(true);
     }//GEN-LAST:event_jMenuItem29ActionPerformed
 
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        //MateriaisController.avisoEstoque();
+        new CRUD.Relatorios.Geral.VisualizarGeral().setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -499,6 +522,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem30;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPopupMenu.Separator jSeparator1;
@@ -506,6 +531,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JMenu pacientes;
     private javax.swing.JMenu pagamentos;
+    private javax.swing.JMenu relatorios;
     private javax.swing.JMenu resultados;
     private javax.swing.JMenu sessao;
     private javax.swing.JMenu usuarios;
