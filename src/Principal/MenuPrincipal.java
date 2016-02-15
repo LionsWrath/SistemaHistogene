@@ -1,5 +1,7 @@
 package Principal;
 
+import BACKUP.BackupController;
+import BACKUP.BackupPrincipal;
 import CRUD.Pacientes.CadastrarPaciente2;
 import CRUD.Pedidos.CadastrarPedidoInterface;
 import CRUD.Pedidos.ConsultarPedidoInterface;
@@ -140,6 +142,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         relatorios = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem25 = new javax.swing.JMenuItem();
+        jMenuItem26 = new javax.swing.JMenuItem();
+        jMenuItem27 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -360,6 +366,34 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(relatorios);
 
+        jMenu1.setText("Backup");
+
+        jMenuItem25.setText("Importar");
+        jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem25ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem25);
+
+        jMenuItem26.setText("Exportar");
+        jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem26ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem26);
+
+        jMenuItem27.setText("Listar");
+        jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem27ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem27);
+
+        jMenuBar1.add(jMenu1);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -466,6 +500,47 @@ public class MenuPrincipal extends javax.swing.JFrame {
         new CRUD.Pagamentos.ConsultarPagamento().setVisible(true);
     }//GEN-LAST:event_jMenuItem24ActionPerformed
 
+    private void jMenuItem25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem25ActionPerformed
+        if (JOptionPane.showConfirmDialog(null, "Tem certeza que deseja importar um banco de dados?", "WARNING", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+            JFileChooser fc = new JFileChooser();
+            //fc.setFileSelectionMode( JFileChooser.DIRECTORIES_ONLY);
+            fc.showOpenDialog(this);
+            String path = fc.getSelectedFile().getPath();
+            BackupController backup = new BackupController();
+            File data = new File(path);
+            try {
+                data.createNewFile();
+            } catch (IOException ex) {
+                Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.out.println(path + "AQUII");
+            backup.restoreSQL(path);
+        }
+    }//GEN-LAST:event_jMenuItem25ActionPerformed
+
+    private void jMenuItem26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem26ActionPerformed
+        if (JOptionPane.showConfirmDialog(null, "Tem certeza que deseja exportar o banco de dados?", "WARNING", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+            JFileChooser fc = new JFileChooser();
+            fc.showOpenDialog(this);
+            String path = fc.getSelectedFile().getPath();
+            BackupController backup = new BackupController();
+
+            try {
+                backup.dumpSQL(path);
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jMenuItem26ActionPerformed
+
+    private void jMenuItem27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem27ActionPerformed
+        try {
+            new BackupPrincipal().setVisible(true);
+        } catch (IOException ex) {
+            Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jMenuItem27ActionPerformed
+
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
         //MateriaisController.avisoEstoque();
         new CRUD.SalaEquipamentos.Itens.ConsultarItem().setVisible(true);
@@ -503,6 +578,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu exames;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -516,6 +592,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem24;
+    private javax.swing.JMenuItem jMenuItem25;
+    private javax.swing.JMenuItem jMenuItem26;
+    private javax.swing.JMenuItem jMenuItem27;
     private javax.swing.JMenuItem jMenuItem28;
     private javax.swing.JMenuItem jMenuItem29;
     private javax.swing.JMenuItem jMenuItem3;
