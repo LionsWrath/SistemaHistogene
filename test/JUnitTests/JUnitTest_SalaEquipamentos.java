@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Carlos
+ * @author 
  */
 public class JUnitTest_SalaEquipamentos {
     
@@ -67,7 +67,7 @@ public class JUnitTest_SalaEquipamentos {
         interfacevazia.getDatamanutencao().setText("13/10/2014");
         interfacevazia.getLocalizacao().setText("");
         interfacevazia.getFreezer().setSelected(true);
-        interfacevazia.getItem().setText("Carlos Henrique");
+        interfacevazia.getItem().setText("Gabriel Belini");
         assertFalse(interfacevazia.checkfields());
         
     }
@@ -77,7 +77,7 @@ public class JUnitTest_SalaEquipamentos {
         interfacevazia.getDatamanutencao().setText("");
         interfacevazia.getLocalizacao().setText("Sala 301");
         interfacevazia.getFreezer().setSelected(true);
-        interfacevazia.getItem().setText("Carlos Henrique");
+        interfacevazia.getItem().setText("gabriel belini");
         assertFalse(interfacevazia.checkfields());
         
     }
@@ -87,7 +87,7 @@ public class JUnitTest_SalaEquipamentos {
         CadastrarItemInterface interfacevazia = new CadastrarItemInterface();
         interfacevazia.getDatamanutencao().setText("13/10/2014");
         interfacevazia.getLocalizacao().setText("Sala 301");
-        interfacevazia.getItem().setText("Carlos Henrique");
+        interfacevazia.getItem().setText("Gabriel Belini");
         assertFalse(interfacevazia.checkfields());
         
     }
@@ -97,7 +97,7 @@ public class JUnitTest_SalaEquipamentos {
         CadastrarItemInterface interfacevazia = new CadastrarItemInterface();
         interfacevazia.getDatamanutencao().setText("13/10/2014");
         interfacevazia.getLocalizacao().setText("Sala 301");
-        interfacevazia.getItem().setText("Carlos Henrique");
+        interfacevazia.getItem().setText("Gabriel Belini");
         interfacevazia.getFreezer().setSelected(true);
         assertTrue(interfacevazia.checkfields());
         
@@ -142,7 +142,7 @@ public class JUnitTest_SalaEquipamentos {
         CadastrarItemInterface interfacevazia = new CadastrarItemInterface();
         interfacevazia.getDatamanutencao().setText("13-10/2014");
         interfacevazia.getLocalizacao().setText("Sala 301");
-        interfacevazia.getItem().setText("Carlos Henrique");
+        interfacevazia.getItem().setText("Gabriel Belini");
         assertFalse(interfacevazia.checkfields());
         
     }
